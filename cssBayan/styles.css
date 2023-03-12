@@ -93,6 +93,7 @@ h1 {
 }
 
 .item__label-text {
+  font-size: 2em;
   position: relative;
   font-weight: 500;
   z-index: 15;
@@ -147,4 +148,46 @@ h1 {
   background: #e12841;
   transform: scale(0.9);
   border-radius: 2em;
+}
+
+/* media */
+
+@media (max-width: 820px) {
+
+  .item__input:hover~.item__img {
+    height: 35vh;
+  }
+
+  .item__input:checked~.item__img {
+    height: 35vh;
+  }
+
+  .item__label-text {
+    font-size: 1.3em;
+  }
+
+  .item__label-num {
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+@media (max-width: 320px) {
+
+  .item__input:hover~.item__img {
+    height: 15vh;
+  }
+
+  .item__input:checked~.item__img {
+    height: 15vh;
+  }
+
+  .item__label-text {
+    font-size: 1.0em;
+  }
+
+  .item__label-num {
+    width: 1.2em;
+    height: 1.2em;
+  }
 }
