@@ -1,0 +1,150 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main {
+  width: 100%;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: gray;
+}
+
+.container {
+  padding: 3% 4%;
+  width: 65%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h1 {
+  padding-bottom: 1em;
+  color: #fff;
+  font-size: 2em;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+
+.item {
+  min-width: 100%;
+  position: relative;
+  padding: 3%;
+  background: rgb(42, 139, 200);
+  box-shadow: 0 23em 28em rgba(0, 0, 0, 0.08);
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.item__input {
+  appearance: none;
+}
+
+.item__label {
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.item__label-title {
+  width: 100%;
+  margin-bottom: 1%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item__label-text--span {
+  font-size: 2em;
+  color: rgba(0, 0, 0, 0.1);
+  transition: transform 1s;
+}
+
+.item:hover .item__label-text--span {
+  color: rgba(0, 0, 0, 1.0);
+  transform: rotate(135deg);
+}
+
+.item__label-num {
+  width: 2em;
+  height: 2em;
+  background: rgb(67, 2, 2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-size: 1.25em;
+  border-radius: 50%;
+}
+
+.item__label-text {
+  position: relative;
+  font-weight: 500;
+  z-index: 15;
+}
+
+
+.item__img {
+  height: 0;
+  opacity: 1;
+  transition: 2.5s;
+  overflow: hidden;
+}
+
+.item__img img {
+  max-width: 100%;
+  max-height: auto;
+  text-align: center;
+}
+
+
+.item__input:hover~.item__img {
+  height: 65vh;
+  opacity: 1;
+  z-index: 15;
+
+}
+
+.item__input:checked~.item__img {
+  height: 65vh;
+  opacity: 1;
+  z-index: 15;
+}
+
+
+.item {
+  background-color: rgb(255, 17, 48);
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0em 0.3em 2em 0em rgba(255, 17, 48, 0.3);
+}
+
+.item:hover {
+  transform: scale(1.03);
+  color: black;
+  border-radius: 3em;
+}
+
+
+.item:active {
+  background: #e12841;
+  transform: scale(0.9);
+  border-radius: 2em;
+}
